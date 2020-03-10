@@ -18,4 +18,5 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/livro/criar','LivroController@criar');
 Route::get('/{livro}', 'LivroController@listar');
