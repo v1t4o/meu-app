@@ -17,31 +17,21 @@
         <h1 id="titulo">Faculdade de Filosofia, Letras e Ciências Humanas</h1>
     </div>
     <div id="corpo">
-        <form id="interno">
+        <form id="interno" action="/livro" method="POST">
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div class="form-group">
-                <h2 style="text-align:center">Cadastro de Livro</h2>
+                <h2 style="text-align:center">Autenticação de usuário</h2>
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Título</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o título do livro">
+                <label for="exampleFormControlInput1">Usuário</label>
+                <input type="text" name="usuario" class="form-control" id="exampleFormControlInput1" placeholder="Usuário">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">Autor</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o nome do autor">
+                <label for="exampleFormControlInput1">Senha</label>
+                <input type="text" name="senha" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlInput1">ISBN</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o ISBN do livro">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Procedência</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>Nacional</option>
-                <option>Internacional</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <button id="cadastro" type="submit" class="btn btn-primary">Cadastrar</button>
+                <button id="cadastro" type="submit" class="btn btn-primary">Login</button>
             </div>
         </form>
         <!-- Optional JavaScript -->
