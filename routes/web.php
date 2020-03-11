@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 */
 Route::get('/', 'LivroController@login');
-Route::match(['post','get'],'/livro', 'LivroController@listar');
+Route::post('/livro', 'LivroController@listar');
+Route::post('/salvar', 'LivroController@salvar');
 Route::get('/livro/criar','LivroController@criar');
 /*Route::get('/{livro}', 'LivroController@listar');*/

@@ -12,26 +12,38 @@
     <title>Cadastro de Livros</title>
   </head>
   <body>
-    <div id="cab">
-        <img id="logo" src="https://www.fflch.usp.br/sites/fflch.usp.br/files/2019-11/06_fflch_simbolo.jpg">
-        <h1 id="titulo">Faculdade de Filosofia, Letras e Ciências Humanas</h1>
+    <div id="cab" class="row">
+        <div class="col-sm">
+            <img id="logo" src="https://www.fflch.usp.br/sites/fflch.usp.br/files/2019-11/06_fflch_simbolo.jpg">
+        </div>
+        <div class="col-sm">
+            <h1 id="titulo">Faculdade de Filosofia, Letras e Ciências Humanas</h1>
+        </div>
     </div>
-    <div id="corpo">
+    <div id="corpo" class="row">
         <form id="interno" action="/livro" method="POST">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
-            <div class="form-group">
-                <h2 style="text-align:center">Autenticação de usuário</h2>
+            <h2 style="text-align:center">Autenticação de usuário</h2>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Usuário</label>
+                        <input type="text" name="usuario" class="form-control" id="exampleFormControlInput1" placeholder="Usuário">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Senha</label>
+                        <input type="text" name="senha" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Usuário</label>
-                <input type="text" name="usuario" class="form-control" id="exampleFormControlInput1" placeholder="Usuário">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Senha</label>
-                <input type="text" name="senha" class="form-control" id="exampleFormControlInput1" placeholder="Senha">
-            </div>
-            <div class="form-group">
-                <button id="cadastro" type="submit" class="btn btn-primary">Login</button>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <button id="cadastro" type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
             </div>
         </form>
         <!-- Optional JavaScript -->

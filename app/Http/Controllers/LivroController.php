@@ -28,4 +28,8 @@ class LivroController extends Controller
     public function login(){
         return view ('login');
     }
+
+    public function salvar(){
+        echo "Tá salvado!";
+    }
 }
