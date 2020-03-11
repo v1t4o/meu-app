@@ -1,0 +1,44 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Login;
+
+class LoginController extends Controller
+{
+    // //Função para verificação de Login
+    //v.1
+    public function login(Request $dados){
+        $user = $dados->get("usuario");
+        $pass = $dados->get("senha");
+        if( $user == "admin" && $pass == "123456"){
+            return view ('listar');
+        }
+        else{
+            return view ('login');
+        }
+    }
+    
+    //v.2
+    ////Função para listagem de pessoas cadastradas
+    /*public function listpessoa(){
+        $pessoa = Pessoa::all();
+        return view ('listpessoa',compact('pessoas'));
+    }*/
+
+    //Função para redirecionamento para tela de cadastro.
+    public function caduser(){
+        return view ('caduser');
+    }
+
+    //Função para salvamento de cadastro de livro no banco de dados
+    public function svuser(Request $caduser){
+        $objuser = new Login;
+        $objuser->usuario = $caduser->usuario;
+        $objuser->senha = $caduser->senha;
+        $objuser->email = $caduser->email;
+        $objuser->save();
+        return redirect("/");
+    }
+}

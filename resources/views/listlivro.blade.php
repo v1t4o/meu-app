@@ -17,7 +17,12 @@
         </div>
     <div id="principal" class="row">
         <div class="col-sm">
-            <a id="CadLivro" href="http://127.0.0.1:8000/livro/criar">Cadastrar Livro</a>
+            @foreach($livros as $livro)
+            {{ $livro->titulo }} <br>
+            @endforeach
+        </div>
+        <div class="col-sm">
+            <a id="CadLivro" href="http://127.0.0.1:8000/livro/cadastrar">Cadastrar Livro</a>
         </div>
     </div>
 </body>

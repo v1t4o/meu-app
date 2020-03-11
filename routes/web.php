@@ -17,8 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::get('/', 'LivroController@login');
-Route::post('/livro', 'LivroController@listar');
-Route::post('/salvar', 'LivroController@salvar');
-Route::get('/livro/criar','LivroController@criar');
+
+//Rotas de Login
+Route::get('/', 'LoginController@login');
+Route::post('/login/salvar', 'LoginController@svuser');
+Route::get('/login/cadastrar','LoginController@caduser');
+
+//Rotas de Livros
+Route::post('/livro/listar', 'LivroController@listlivro');
+Route::post('/livro/salvar', 'LivroController@salvalivro');
+Route::get('/livro/cadastrar','LivroController@cadlivro');
 /*Route::get('/{livro}', 'LivroController@listar');*/
+
+//Rotas de Pessoa
+Route::post('/pessoa/listar', 'PessoaController@listpessoa');
+Route::post('/pessoa/salvar', 'PessoaController@salvapessoa');
+Route::get('/pessoa/cadastrar','PessoaController@cadpessoa');
+

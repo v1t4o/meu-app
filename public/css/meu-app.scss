@@ -31,6 +31,20 @@ div#corpo{
     
 }
 
+div#cplog{
+    max-width: 100%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #002d6e;
+    border-radius: 10px;
+    margin-top:0.5%;
+    margin-left: 0.5%; 
+    position: relative;
+    width:20%;
+    height:100%;
+    
+}
+
 div#principal{
     max-width: 100%;
     border-width: 4px;
@@ -78,6 +92,13 @@ button#cadastro{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+button#cadlog{
+    background-color: #002d6e;
+    position: relative;
+    left: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 a#CadLivro:link, a#CadLivro:visited {
     background-color: #002d6e;
     color: white;
@@ -89,6 +110,7 @@ a#CadLivro:link, a#CadLivro:visited {
     margin-top: 2%;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
 }
 
 a#CadLivro:hover, a#CadLivro:active {
@@ -97,4 +119,5 @@ a#CadLivro:hover, a#CadLivro:active {
     margin-top: 2%;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
 }
