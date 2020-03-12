@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="<?php echo asset('fflchico.ico')?>" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo asset('css/meu-app.scss')?>" type="text/css">
@@ -48,14 +48,19 @@
                 <div class="row">
                     <div class="col-sm">
                         <div class="form-group">
-                            <label for="isbn">CPF</label>
-                            <input maxlength=13 name="isbn" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o ISBN do livro">
+                            <label for="cpf">CPF</label>
+                            <input maxlength=11 name="cpf" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o número do seu CPF">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <div class="form-group">
+                        <div class="text-left">
+                            <a id="BtnSairCad" href="http://127.0.0.1:8000/dashboard">Menu</a>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="text-right">
                             <button id="cadastro" type="submit" class="btn btn-primary">Cadastrar</button>
                         </div>
                     </div>

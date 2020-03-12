@@ -5,11 +5,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="<?php echo asset('fflchico.ico')?>" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo asset('css/meu-app.scss')?>" type="text/css">
-    <title>Cadastro de Pessoa</title>
+    <title>Dashboard</title>
   </head>
   <body>
     <div class="container">
@@ -22,12 +22,21 @@
             </div>
         </div>
         <div id="corpo" class="row">
-            <div class="row">
-                <div class="col-sm">
-                    <a id="CadLogin" href="http://127.0.0.1:8000/login/cadastrar">Cadastre-se</a>
+            <div class="col-sm">
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/livro/cadastrar">Cadastrar Livro</a>
                 </div>
-                <div class="col-sm">
-                        <button id="cadlog" type="submit" class="btn btn-primary">Login</button>
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/livro/listar">Listar Livro</a>
+                </div>
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/pessoa/cadastrar">Cadastrar Pessoa</a>
+                </div>
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/pessoa/listar">Listar Pessoa</a>
+                </div>
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/sair">Sair</a>
                 </div>
             </div>
         </div>

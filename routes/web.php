@@ -19,18 +19,27 @@ Route::get('/', function () {
 */
 
 //Rotas de Login
-Route::get('/', 'LoginController@login');
+Route::get('/', 'LoginController@inicial');
+Route::post('/login', 'LoginController@login');
 Route::post('/login/salvar', 'LoginController@svuser');
 Route::get('/login/cadastrar','LoginController@caduser');
+//Rotas de saída de sistema
+Route::get('/sair', 'LoginController@sair');
+
+
+//Rotas de dashboard
+Route::get('/dashboard','LoginController@menu');
 
 //Rotas de Livros
-Route::post('/livro/listar', 'LivroController@listlivro');
+Route::get('/livro/listar', 'LivroController@listlivro');
 Route::post('/livro/salvar', 'LivroController@salvalivro');
 Route::get('/livro/cadastrar','LivroController@cadlivro');
 /*Route::get('/{livro}', 'LivroController@listar');*/
 
 //Rotas de Pessoa
-Route::post('/pessoa/listar', 'PessoaController@listpessoa');
+Route::get('/pessoa/listar', 'PessoaController@listpessoa');
 Route::post('/pessoa/salvar', 'PessoaController@salvapessoa');
 Route::get('/pessoa/cadastrar','PessoaController@cadpessoa');
+
+
 

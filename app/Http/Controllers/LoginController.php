@@ -7,13 +7,18 @@ use App\Login;
 
 class LoginController extends Controller
 {
+    //Função para página inicial
+    public function inicial(){
+        return view ('login');
+    }
+    
     // //Função para verificação de Login
     //v.1
     public function login(Request $dados){
         $user = $dados->get("usuario");
         $pass = $dados->get("senha");
         if( $user == "admin" && $pass == "123456"){
-            return view ('listar');
+            return view ('dashboard');
         }
         else{
             return view ('login');
@@ -30,6 +35,14 @@ class LoginController extends Controller
     //Função para redirecionamento para tela de cadastro.
     public function caduser(){
         return view ('caduser');
+    }
+
+    public function sair(){
+        return redirect("/");
+    }
+
+    public function menu(){
+        return view ('dashboard');
     }
 
     //Função para salvamento de cadastro de livro no banco de dados

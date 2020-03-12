@@ -9,7 +9,7 @@ class PessoaController extends Controller
 {
     ////Função para listagem de pessoas cadastradas
     public function listpessoa(){
-        $pessoa = Pessoa::all();
+        $pessoas = Pessoa::all();
         return view ('listpessoa',compact('pessoas'));
     }
 
@@ -26,7 +26,7 @@ class PessoaController extends Controller
         $objpessoa->email = $cadpessoa->email;
         $objpessoa->idade = $cadpessoa->idade;
         $objpessoa->save();
-        return redirect("/listpessoa");
+        return redirect("/pessoa/listar");
     }
 }
 

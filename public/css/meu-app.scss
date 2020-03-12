@@ -37,10 +37,11 @@ div#cplog{
     border-style: solid;
     border-color: #002d6e;
     border-radius: 10px;
+    //margin: 0 auto;
     margin-top:0.5%;
-    margin-left: 0.5%; 
+    margin-left: 69.5%; 
     position: relative;
-    width:20%;
+    width:30%;
     height:100%;
     
 }
@@ -88,36 +89,140 @@ img#logo{
 button#cadastro{
     background-color: #002d6e;
     position: relative;
-    left: 93.2%;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:1%;
 }
 
 button#cadlog{
     background-color: #002d6e;
     position: relative;
-    left: 40%;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 4%;
 }
 
-a#CadLivro:link, a#CadLivro:visited {
+a#CadItem:link, a#CadItem:visited {
     background-color: #002d6e;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    left: 45%;
-    margin-top: 2%;
+    //left: 38%;
+    margin:0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%; 
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
+    width: 200px;
 }
 
-a#CadLivro:hover, a#CadLivro:active {
+a#CadItem:hover, a#CadItem:active {
     background-color: blue;
-    left: 45%;
-    margin-top: 2%;
+    //left: 38%;
+    margin:0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%; 
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
+    width: 200px;
+}
+
+a#BtnSair:link, a#BtnSair:visited {
+    background-color: #002d6e;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    //left: 38%;
+    //margin:0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%; 
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    width: 100px;
+}
+
+a#BtnSair:hover, a#BtnSair:active {
+    background-color: blue;
+    //left: 38%;
+    //margin:0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%; 
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    width: 100px;
+}
+
+div#btnmenu{
+    margin-left:1%;
+    margin-top: 0.5%;
+}
+
+div#btncad{
+    width:80%;
+}
+
+.cabecalho{
+    background-color: #1861c7;
+    color: #fff;
+    font-weight: bold;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #002d6e;
+    text-align: center;
+}
+
+.item{
+    border-width: 5px;
+    border-style: solid;
+    border-color: #002d6e;
+    text-align: center;
+
+}
+
+.itens{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+a#BtnSairCad:link, a#BtnSairCad:visited {
+    background-color: #002d6e;
+    color: #fff;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    //left: 38%;
+    //margin:0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%; 
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+    width: 100px;
+    height: 35px;
+}
+
+a#BtnSairCad:hover, a#BtnSairCad:active {
+    color: #fff;
+    background-color: blue;
+    //left: 38%;
+    //margin:0 auto;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%; 
+    padding: 6px 25px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
 }

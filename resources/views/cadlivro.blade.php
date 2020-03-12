@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="<?php echo asset('fflchico.ico')?>" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo asset('css/meu-app.scss')?>" type="text/css">
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div id="corpo" class="row">
-            <form id="interno" method="POST" action="/salvar">
+            <form id="interno" method="POST" action="/livro/salvar">
                 @csrf
                 <h2 style="text-align:center">Cadastro de Livro</h2>
                 <div class="row">
@@ -60,7 +60,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        <div class="form-group">
+                        <div class="text-left">
+                            <a id="BtnSairCad" href="http://127.0.0.1:8000/dashboard">Menu</a>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="text-right">
                             <button id="cadastro" type="submit" class="btn btn-primary">Cadastrar</button>
                         </div>
                     </div>
