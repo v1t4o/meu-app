@@ -15,9 +15,10 @@ class LoginController extends Controller
     // //Função para verificação de Login
     //v.1
     public function login(Request $dados){
+        $objuser = new Login;
         $user = $dados->get("usuario");
         $pass = $dados->get("senha");
-        if( $user == "admin" && $pass == "123456"){
+        if( $user == "admin" && $pass == 123456){
             return view ('dashboard');
         }
         else{
