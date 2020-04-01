@@ -34,7 +34,6 @@ Route::get('/dashboard','LoginController@menu');
 Route::get('/livro/listar', 'LivroController@listlivro');
 Route::post('/livro/salvar', 'LivroController@salvalivro');
 Route::get('/livro/cadastrar','LivroController@cadlivro');
-/*Route::get('/{livro}', 'LivroController@listar');*/
 
 //Rotas de Pessoa
 Route::get('/pessoa/listar', 'PessoaController@listpessoa');
