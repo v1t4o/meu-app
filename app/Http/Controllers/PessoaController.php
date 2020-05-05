@@ -8,25 +8,25 @@ use App\Pessoa;
 class PessoaController extends Controller
 {
     ////Função para listagem de pessoas cadastradas
-    public function listpessoa(){
+    public function index(){
         $pessoas = Pessoa::all();
-        return view ('listpessoa',compact('pessoas'));
+        return view ('pessoas.index',compact('pessoas'));
     }
 
     //Função para redirecionamento para tela de cadastro.
-    public function cadpessoa(){
-        return view ('cadpessoa');
+    public function create(){
+        return view ('pessoas.create');
     }
 
     //Função para salvamento de cadastro de livro no banco de dados
-    public function salvapessoa(Request $cadpessoa){
+    public function store(Request $cadpessoa){
         $objpessoa = new Pessoa;
         $objpessoa->nome = $cadpessoa->nome;
         $objpessoa->cpf = $cadpessoa->cpf;
         $objpessoa->email = $cadpessoa->email;
         $objpessoa->idade = $cadpessoa->idade;
         $objpessoa->save();
-        return redirect("/pessoa/listar");
+        return redirect("/pessoas");
     }
 }
 

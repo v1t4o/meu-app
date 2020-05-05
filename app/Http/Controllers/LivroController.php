@@ -12,24 +12,24 @@ use App\Livro;
 class LivroController extends Controller
 {
     //Função para listagem de livros cadastrados
-    public function listlivro(){
+    public function index(){
         $livros = Livro::all();
-        return view ('listlivro',compact('livros'));
+        return view ('livros.index',compact('livros'));
     }
 
     //Função para redirecionamento para tela de cadastro.
-    public function cadlivro(){
-        return view ('cadlivro');
+    public function create(){
+        return view ('livros.create');
     }
 
     //Função para salvamento de cadastro de livro no banco de dados
-    public function salvalivro(Request $cadlivro){
+    public function store(Request $cadlivro){
         $objlivro = new Livro;
         $objlivro->titulo = $cadlivro->titulo;
         $objlivro->autor = $cadlivro->autor;
         $objlivro->isbn = $cadlivro->isbn;
         $objlivro->procedencia = $cadlivro->procedencia;
         $objlivro->save();
-        return redirect("/livro/listar");
+        return redirect("/livros");
     }
 }
