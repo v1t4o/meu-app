@@ -28,5 +28,9 @@ class PessoaController extends Controller
         $objpessoa->save();
         return redirect("/pessoas");
     }
+
+    public function show(Pessoa $pessoa){
+        return view('pessoas.show', compact('pessoa'));
+    }
 }
 

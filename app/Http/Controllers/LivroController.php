@@ -32,4 +32,8 @@ class LivroController extends Controller
         $objlivro->save();
         return redirect("/livros");
     }
+
+    public function show(Livro $livro){
+        return view('livros.show', compact('livro'));
+    }
 }

@@ -13,7 +13,7 @@
                         </tr>
                         @foreach($pessoas as $pessoa)
                         <tr class="linha">
-                            <td class="item">{{ $pessoa->nome }}</td>
+                            <td class="item"><a href="/pessoas/{{ $pessoa->id }}">{{ $pessoa->nome }}</a></td>
                             <td class="item">{{ $pessoa->cpf }}</td>
                             <td class="item">{{ $pessoa->email }}</td>
                             <td class="item">{{ $pessoa->idade }}</td>
@@ -26,7 +26,7 @@
                         <a id="BtnSair" href="http://127.0.0.1:8000/">Menu</a>
                     </div>
                     <div class="text-center" id="btncad">
-                        <a id="CadItem" href="http://127.0.0.1:8000/pessoa/cadastrar">Cadastrar Pessoa</a>
+                        <a id="CadItem" href="http://127.0.0.1:8000/pessoas/create">Cadastrar Pessoa</a>
                     </div>
                 </div>
             </div>

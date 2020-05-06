@@ -4,7 +4,7 @@
             <div class="col-sm">
             <h2 style="text-align:center">Livros Cadastrados</h2>
                 <div class="row">
-                    <table class="itens" align="center">
+                    <table class="itens" text-align="center">
                         <tr class="linha">
                             <td class="cabecalho">Titulo</td>
                             <td class="cabecalho">Autor</td>
@@ -13,7 +13,7 @@
                         </tr>
                         @foreach($livros as $livro)
                         <tr class="linha">
-                            <td class="item">{{ $livro->titulo }}</td>
+                            <td class="item"><a href="http://127.0.0.1:8000/livros/{{ $livro->id }}">{{ $livro->titulo }}</a></td>
                             <td class="item">{{ $livro->autor }}</td>
                             <td class="item">{{ $livro->isbn }}</td>
                             <td class="item">{{ $livro->procedencia }}</td>
