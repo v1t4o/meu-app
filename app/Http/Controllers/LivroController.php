@@ -19,7 +19,7 @@ class LivroController extends Controller
 
     //Função para redirecionamento para tela de cadastro.
     public function create(){
-        return view ('livros.create');
+        return view ('livros.create')->with('livro', new Livro);
     }
 
     //Função para salvamento de cadastro de livro no banco de dados
@@ -35,5 +35,23 @@ class LivroController extends Controller
 
     public function show(Livro $livro){
         return view('livros.show', compact('livro'));
+    }
+
+    public function edit(Livro $livro){
+        return view('livros.edit', compact('livro'));
+    }
+
+    public function update(Livro $livro, Request $request){
+        $livro->titulo = $request->titulo;
+        $livro->autor = $request->autor;
+        $livro->isbn = $request->isbn;
+        $livro->procedencia = $request->procedencia;
+        $livro->update();
+        return redirect("/livros/$livro->id");
+    }
+
+    public function destroy(Livro $livro){
+        $livro->delete();
+        return redirect("/livros");
     }
 }

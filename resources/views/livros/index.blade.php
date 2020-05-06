@@ -10,6 +10,7 @@
                             <td class="cabecalho">Autor</td>
                             <td class="cabecalho">ISBN</td>
                             <td class="cabecalho">Procedência</td>
+                            <td class="cabecalho">Ações</td>
                         </tr>
                         @foreach($livros as $livro)
                         <tr class="linha">
@@ -17,6 +18,15 @@
                             <td class="item">{{ $livro->autor }}</td>
                             <td class="item">{{ $livro->isbn }}</td>
                             <td class="item">{{ $livro->procedencia }}</td>
+                            <td class="item">
+                                <a href="http://127.0.0.1:8000/livros/{{ $livro->id }}/edit"><i class="fas fa-edit"></i></a>
+                                <form method="POST" action="/livros/{{ $livro->id }}">
+                                    {{ csrf_field() }} 
+                                    {{ method_field('delete') }}
+                                    <button type="submit"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                            
                         </tr>
                         @endforeach
                     </table>

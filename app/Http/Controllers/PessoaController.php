@@ -15,7 +15,7 @@ class PessoaController extends Controller
 
     //Função para redirecionamento para tela de cadastro.
     public function create(){
-        return view ('pessoas.create');
+        return view ('pessoas.create')->with('pessoa', new Pessoa);
     }
 
     //Função para salvamento de cadastro de livro no banco de dados
@@ -31,6 +31,24 @@ class PessoaController extends Controller
 
     public function show(Pessoa $pessoa){
         return view('pessoas.show', compact('pessoa'));
+    }
+
+    public function edit(Pessoa $pessoa){
+        return view('pessoas.edit', compact('pessoa'));
+    }
+
+    public function update(Pessoa $pessoa, Request $request){
+        $pessoa->nome = $request->nome;
+        $pessoa->cpf = $request->cpf;
+        $pessoa->email = $request->email;
+        $pessoa->idade = $request->idade;
+        $pessoa->update();
+        return redirect("/pessoas/$pessoa->id");
+    }
+
+    public function destroy(Pessoa $pessoa){
+        $pessoa->delete();
+        return redirect("/pessoas");
     }
 }
 
