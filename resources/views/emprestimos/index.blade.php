@@ -14,8 +14,8 @@
                         </tr>
                         @foreach($emprestimos as $emprestimo)
                         <tr class="linha">
-                            <td class="item"><a href="http://127.0.0.1:8000/emprestimos/{{ $emprestimo->id }}">{{ $emprestimo->titulo }}</a></td>
-                            <td class="item">{{ $emprestimo->usuario }}</td>
+                            <td class="item"><a href="http://127.0.0.1:8000/emprestimos/{{ $emprestimo->id }}">{{ $emprestimo->livro->titulo }}</a></td>
+                            <td class="item">{{ $emprestimo->pessoa->nome }}</td>
                             <td class="item">{{ $emprestimo->inicio }}</td>
                             <td class="item">{{ $emprestimo->fim }}</td>
                             <td class="item">
@@ -26,7 +26,6 @@
                                     <button type="submit"><i class="fas fa-trash"></i></button>
                                 </form>
                             </td>
-                            
                         </tr>
                         @endforeach
                     </table>

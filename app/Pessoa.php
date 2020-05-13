@@ -10,4 +10,8 @@ class Pessoa extends Model
     {
         return $this->hasMany('App\Emprestimo');
     }
+
+    public function usuariosid(){
+        return Pessoa::all();
+    }
 }

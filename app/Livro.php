@@ -10,4 +10,16 @@ class Livro extends Model
     {
         return $this->hasMany('App\Emprestimo');
     }
+
+    public function procedencia(){
+        return [
+            'Nacional',
+            'Internacional'
+        ];
+    }
+
+    public function livrosid(){
+        return Livro::all();
+    }
+
 }

@@ -27,8 +27,22 @@
             <div class="form-group">
                 <label for="procedencia">Procedência</label>
                 <select name="procedencia" class="form-control" id="exampleFormControlSelect1">
-                <option>Nacional</option>
-                <option>Internacional</option>
+                <option value="" selected="">- Selecione -</option>
+                @foreach ($livro->procedencia() as $option)
+
+                    {{-- 1. Situação em que não houve tentativa de submissão e é uma edição --}}
+                    @if (old('procedencia') == '' and isset($livro->procedencia))
+                    <option value="{{$option}}" {{ ( $livro->procedencia == $option) ? 'selected' : ''}}>
+                        {{$option}}
+                    </option>
+                    {{-- 2. Situação em que houve tentativa de submissão, o valor de old prevalece --}}
+                    @else
+                    <option value="{{$option}}" {{ ( old('procedencia') == $option) ? 'selected' : ''}}>
+                        {{$option}}
+                    </option>
+                    @endif
+                    
+                @endforeach
                 </select>
             </div>
         </div>

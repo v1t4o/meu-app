@@ -27,12 +27,9 @@ class EmprestimoController extends Controller
      */
     public function create()
     {
-        $pessoa = new Pessoa;
-        $pessoa = Pessoa::all();
-        $livro = new Livro;
-        $livro = Livro::all();
-        return view ('emprestimos.create')->with($pessoa, $livro);
-
+        $pessoas = Pessoa::all();
+        $livros = Livro::all();
+        return view ('emprestimos.create', ['pessoas' => $pessoas, 'livros' => $livros]);
     }
 
     /**
@@ -61,8 +58,7 @@ class EmprestimoController extends Controller
      */
     public function show(Emprestimo $emprestimo)
     {
-        return view('emprestimos.show', compact('emprestimo'));
-
+        return view('emprestimos.show')->with('emprestimo', $emprestimo);
     }
 
     /**

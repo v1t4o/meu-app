@@ -4,8 +4,8 @@
         <div class="col-sm">
         <h2 style="text-align:center">Dados do Empréstimo</h2>
             <div class="col">
-                <b>Título:</b> {{ $emprestimo->titulo }} </br>
-                <b>Usuário:</b> {{ $emprestimo->autor }} </br>
+                <b>Título:</b> {{ $emprestimo->livro->titulo }} </br>
+                <b>Usuário:</b> {{ $emprestimo->pessoa->nome }} </br>
                 <b>Retirada:</b> {{ $emprestimo->inicio }} </br>
                 <b>Devolução:</b> {{ $emprestimo->fim }} </br>
             </div>

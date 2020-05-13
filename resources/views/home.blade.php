@@ -14,6 +14,12 @@
                 <div class="row">
                     <a id="CadItem" href="http://127.0.0.1:8000/pessoas">Listar Pessoa</a>
                 </div>
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/emprestimos/create">Cadastrar Empréstimo</a>
+                </div>
+                <div class="row">
+                    <a id="CadItem" href="http://127.0.0.1:8000/emprestimos">Listar Empréstimos</a>
+                </div>
                 
             </div>
         </div>

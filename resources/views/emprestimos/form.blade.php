@@ -5,8 +5,8 @@
             <div class="form-group">
                 <label for="pessoa_id">Usuário</label>
                 <select name="pessoa_id" class="form-control" id="exampleFormControlSelect1">
-                @foreach($pessoa as $pessoa)
-                <option value="{{ $pessoa->id }}">{{$pessoa->titulo}}</option>
+                @foreach($pessoas as $pessoa)
+                <option value="{{ $pessoa->id }}">{{$pessoa->nome}}</option>
                 @endforeach
                 </select>
             </div>
