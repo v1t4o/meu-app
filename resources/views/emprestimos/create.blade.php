@@ -30,12 +30,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        Data de Retirada: <input name="inicio" value="{{old('inicio')}}">
+                        Data de Retirada: <input name="inicio" class="datepicker" value="{{old('inicio')}}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        Data de Devolução: <input name="fim" value="{{old('fim')}}">
+                        Data de Devolução: <input name="fim" class="datepicker" value="{{old('fim')}}">
                     </div>
                 </div>
                 <div class="row">

@@ -20,7 +20,6 @@
                 <div class="row">
                     <a id="CadItem" href="http://127.0.0.1:8000/emprestimos">Listar Empréstimos</a>
                 </div>
-                
             </div>
         </div>
         @endsection

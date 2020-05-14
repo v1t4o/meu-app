@@ -14,9 +14,21 @@ class EmprestimoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $emprestimos = Emprestimo::all();
+        if(isset($request->busca)){
+            $resultados = Livro::where('titulo', '=', "{$request->busca}")->first();
+            if($resultados != null){
+                $emprestimos = Emprestimo::where('livro_id', '=', "{$resultados->id}")->paginate(10);
+            }
+            else{
+                $emprestimos = Emprestimo::paginate(10);
+                return view ('emprestimos.index',compact('emprestimos'));
+            }
+        }
+        else{
+            $emprestimos = Emprestimo::paginate(10);
+        }
         return view ('emprestimos.index',compact('emprestimos'));
     }
 

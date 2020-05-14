@@ -2,7 +2,20 @@
 @section('content')
         <div id="corpo" class="row">
             <div class="col-sm">
-            <h2 style="text-align:center">Empréstimos ativos</h2>
+                <h2 style="text-align:center">Empréstimos ativos</h2>
+                <form method="GET" action="/emprestimos">
+                    <div class="row">
+                        <div class=" col-sm input-group">
+                        <input type="text" class="form-control" name="busca" value="{{ Request()->busca }}">
+
+                        <div class="col-sm input-group-btn">
+                            <button type="submit" class="btn btn-success"> Buscar </button>
+                        </div>
+
+                        </div>
+                    </div>
+                </form>
+                {{ $emprestimos->appends(request()->query())->links() }}
                 <div class="row">
                     <table class="itens" text-align="center">
                         <tr class="linha">

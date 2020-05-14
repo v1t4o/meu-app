@@ -12,8 +12,13 @@ use App\Livro;
 class LivroController extends Controller
 {
     //Função para listagem de livros cadastrados
-    public function index(){
-        $livros = Livro::all();
+    public function index(Request $request){
+        if(isset($request->busca)){
+            $livros = Livro::where('titulo', 'LIKE', "%{$request->busca}%")->paginate(10);
+        }
+        else{
+            $livros = Livro::paginate(10);
+        }
         return view ('livros.index',compact('livros'));
     }
 
@@ -54,4 +59,6 @@ class LivroController extends Controller
         $livro->delete();
         return redirect("/livros");
     }
+
+
 }

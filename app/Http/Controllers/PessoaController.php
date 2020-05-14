@@ -8,8 +8,13 @@ use App\Pessoa;
 class PessoaController extends Controller
 {
     ////Função para listagem de pessoas cadastradas
-    public function index(){
-        $pessoas = Pessoa::all();
+    public function index(Request $request){
+        if(isset($request->busca)){
+            $pessoas = Pessoa::where('nome', 'LIKE', "%{$request->busca}%")->paginate(10);
+        }
+        else{
+            $pessoas = Pessoa::paginate(10);
+        }
         return view ('pessoas.index',compact('pessoas'));
     }
 
