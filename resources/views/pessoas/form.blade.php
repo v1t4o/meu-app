@@ -22,7 +22,7 @@
         <div class="col-sm">
             <div class="form-group">
                 <label for="cpf">CPF</label>
-                <input maxlength=11 name="cpf" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o número do seu CPF" value="{{ old('cpf', $pessoa->cpf) }}">
+                <input maxlength=11 name="cpf" type="text" class="form-control cpf" id="exampleFormControlInput1" placeholder="Escreva o número do seu CPF" value="{{ old('cpf', $pessoa->cpf) }}">
             </div>
         </div>
     </div>

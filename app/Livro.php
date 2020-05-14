@@ -11,10 +11,10 @@ class Livro extends Model
         return $this->hasMany('App\Emprestimo');
     }
 
-    public function procedencia(){
+    public function procedencias(){
         return [
             'Nacional',
-            'Internacional'
+            'Internacional',
         ];
     }
 

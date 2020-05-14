@@ -18,7 +18,7 @@
         <div class="col-sm">
             <div class="form-group">
                 <label for="isbn">ISBN</label>
-                <input maxlength=13 name="isbn" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escreva o ISBN do livro" value="{{old('isbn', $livro->isbn)}}">
+                <input maxlength=13 name="isbn" type="text" class="form-control isbn" id="exampleFormControlInput1" placeholder="Escreva o ISBN do livro" value="{{old('isbn', $livro->isbn)}}">
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
                 <label for="procedencia">Procedência</label>
                 <select name="procedencia" class="form-control" id="exampleFormControlSelect1">
                 <option value="" selected="">- Selecione -</option>
-                @foreach ($livro->procedencia() as $option)
+                @foreach ($livro->procedencias() as $option)
 
                     {{-- 1. Situação em que não houve tentativa de submissão e é uma edição --}}
                     @if (old('procedencia') == '' and isset($livro->procedencia))

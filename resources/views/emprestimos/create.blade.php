@@ -30,12 +30,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        Data de Retirada: <input name="inicio" class="datepicker" value="{{old('inicio')}}">
+                        Data de Retirada: <input name="inicio" class="datepicker" value="{{old('inicio')}}" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        Data de Devolução: <input name="fim" class="datepicker" value="{{old('fim')}}">
+                        Data de Devolução: <input name="fim" class="datepicker" value="{{old('fim')}}" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">

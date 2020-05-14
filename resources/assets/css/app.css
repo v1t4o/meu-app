@@ -1,4 +1,3 @@
-//
 body{
     height: 100%;
 }
@@ -37,7 +36,6 @@ div#cplog{
     border-style: solid;
     border-color: #002d6e;
     border-radius: 10px;
-    //margin: 0 auto;
     margin-top:0.5%;
     margin-left: 69.5%; 
     position: relative;
@@ -73,7 +71,6 @@ h1#titulo{
     text-align: left;
     position: relative;
     left: 6%;
-    //margin-top: 3%;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -107,7 +104,6 @@ a#CadItem:link, a#CadItem:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    //left: 38%;
     margin:0 auto;
     margin-top: 0.5%;
     margin-bottom: 0.5%; 
@@ -119,7 +115,6 @@ a#CadItem:link, a#CadItem:visited {
 
 a#CadItem:hover, a#CadItem:active {
     background-color: blue;
-    //left: 38%;
     margin:0 auto;
     margin-top: 0.5%;
     margin-bottom: 0.5%; 
@@ -136,8 +131,6 @@ a#BtnSair:link, a#BtnSair:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    //left: 38%;
-    //margin:0 auto;
     margin-top: 0.5%;
     margin-bottom: 0.5%; 
     position: relative;
@@ -148,8 +141,6 @@ a#BtnSair:link, a#BtnSair:visited {
 
 a#BtnSair:hover, a#BtnSair:active {
     background-color: blue;
-    //left: 38%;
-    //margin:0 auto;
     margin-top: 0.5%;
     margin-bottom: 0.5%; 
     position: relative;
@@ -197,8 +188,6 @@ a#BtnSairCad:link, a#BtnSairCad:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    //left: 38%;
-    //margin:0 auto;
     margin-top: 0.5%;
     margin-bottom: 0.5%; 
     position: relative;
@@ -211,8 +200,7 @@ a#BtnSairCad:link, a#BtnSairCad:visited {
 a#BtnSairCad:hover, a#BtnSairCad:active {
     color: #fff;
     background-color: blue;
-    //left: 38%;
-    //margin:0 auto;
+    left: 38%;
     margin-top: 0.5%;
     margin-bottom: 0.5%; 
     padding: 6px 25px;
