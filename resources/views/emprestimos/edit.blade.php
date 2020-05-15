@@ -57,12 +57,12 @@
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        Data de Retirada: <input name="inicio" class="datepicker" value="{{old('inicio', $emprestimo->inicio)}}" autocomplete="off">
+                        Data de Retirada: <input name="inicio" class="datepicker" value="{{old('inicio', Carbon\Carbon::parse($emprestimo->inicio)->format('d/m/Y')) }}" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
-                        Data de Devolução: <input name="fim" class="datepicker" value="{{old('fim', $emprestimo->fim)}}" autocomplete="off">
+                        Data de Devolução: <input name="fim" class="datepicker" value="{{old('fim', Carbon\Carbon::parse($emprestimo->fim)->format('d/m/Y'))}}" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">

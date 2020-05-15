@@ -29,8 +29,8 @@
                         <tr class="linha">
                             <td class="item"><a href="http://127.0.0.1:8000/emprestimos/{{ $emprestimo->id }}">{{ $emprestimo->livro->titulo }}</a></td>
                             <td class="item">{{ $emprestimo->pessoa->nome }}</td>
-                            <td class="item">{{ $emprestimo->inicio }}</td>
-                            <td class="item">{{ $emprestimo->fim }}</td>
+                            <td class="item">{{ Carbon\Carbon::parse($emprestimo->inicio)->format('d/m/Y') }}</td>
+                            <td class="item">{{ Carbon\Carbon::parse($emprestimo->fim)->format('d/m/Y') }}</td>
                             <td class="item">
                                 <a href="http://127.0.0.1:8000/emprestimos/{{ $emprestimo->id }}/edit"><i class="fas fa-edit"></i></a>
                                 <form method="POST" action="/emprestimos/{{ $emprestimo->id }}">

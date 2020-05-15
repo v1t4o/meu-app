@@ -6,6 +6,7 @@ use App\Emprestimo;
 use App\Pessoa;
 use App\Livro;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class EmprestimoController extends Controller
 {
@@ -55,8 +56,8 @@ class EmprestimoController extends Controller
         $emprestimo = new Emprestimo;
         $emprestimo->pessoa_id = $request->pessoa_id;
         $emprestimo->livro_id = $request->livro_id;
-        $emprestimo->inicio = $request->inicio;
-        $emprestimo->fim = $request->fim;
+        $emprestimo->inicio = Carbon::createFromFormat('d/m/Y', $request->inicio);
+        $emprestimo->fim = Carbon::createFromFormat('d/m/Y', $request->fim);
         $emprestimo->observacao = $request->observacao;
         $emprestimo->save();
         return redirect("/emprestimos");
@@ -96,8 +97,8 @@ class EmprestimoController extends Controller
     {
         $emprestimo->pessoa_id = $request->pessoa_id;
         $emprestimo->livro_id = $request->livro_id;
-        $emprestimo->inicio = $request->inicio;
-        $emprestimo->fim = $request->fim;
+        $emprestimo->inicio = Carbon::createFromFormat('d/m/Y', $request->inicio);
+        $emprestimo->fim = Carbon::createFromFormat('d/m/Y', $request->fim);
         $emprestimo->observacao = $request->observacao;
         $emprestimo->update();
         return redirect("/emprestimos/$emprestimo->id");

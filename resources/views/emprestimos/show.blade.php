@@ -6,8 +6,8 @@
             <div class="col">
                 <b>Título:</b> {{ $emprestimo->livro->titulo }} </br>
                 <b>Usuário:</b> {{ $emprestimo->pessoa->nome }} </br>
-                <b>Retirada:</b> {{ $emprestimo->inicio }} </br>
-                <b>Devolução:</b> {{ $emprestimo->fim }} </br>
+                <b>Retirada:</b> {{ Carbon\Carbon::parse($emprestimo->inicio)->format('d/m/Y') }} </br>
+                <b>Devolução:</b> {{ Carbon\Carbon::parse($emprestimo->fim)->format('d/m/Y') }} </br>
             </div>
             <div class="row">
                 <div class="text-left" id="btnmenu">
