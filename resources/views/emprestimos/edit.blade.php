@@ -71,11 +71,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm">
-                        <div class="text-left">
-                            <a id="BtnSairCad" href="http://127.0.0.1:8000/">Menu</a>
-                        </div>
-                    </div>
+                    
                     <div class="col-sm">
                         <div class="text-right">
                             <button id="cadastro" type="submit" class="btn btn-primary">Enviar</button>

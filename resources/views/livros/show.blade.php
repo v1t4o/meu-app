@@ -9,14 +9,6 @@
                 <b>ISBN:</b> {{ $livro->isbn }} </br>
                 <b>Procedência:</b> {{ $livro->procedencia }} </br>
             </div>
-            <div class="row">
-                <div class="text-left" id="btnmenu">
-                    <a id="BtnSair" href="http://127.0.0.1:8000/">Menu</a>
-                </div>
-                <div class="text-center" id="btncad">
-                    <a id="CadItem" href="http://127.0.0.1:8000/livros/create">Cadastrar Livro</a>
-                </div>
-            </div>
         </div>
     </div>
 @endsection
