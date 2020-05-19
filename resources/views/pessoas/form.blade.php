@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-sm">
             <div class="text-right">
-                <button id="cadastro" type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-success">Enviar</button>
             </div>
         </div>
     </div>

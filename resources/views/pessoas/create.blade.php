@@ -1,11 +1,13 @@
 @extends('layouts.master')
 
 @section('content')
-    <div id="corpo" class="row">
-        <form id="interno" method="POST" action="/pessoas">
-            @csrf
-            <h2 style="text-align:center">Registro de Empréstimos</h2>
-            @include('pessoas.form')
-        </form>
+    <div class="row">
+        <div class="col-sm">
+            <form method="POST" action="/pessoas">
+                @csrf
+                <h3 style="text-align:center">Cadastro de Pessoas</h3>
+                @include('pessoas.form')
+            </form>
+        </div>
     </div>
 @endsection

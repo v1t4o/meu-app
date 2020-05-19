@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-    <div id="corpo" class="row">
+    <div class="row">
         <div class="col-sm">
-        <h2 style="text-align:center">Dados do Livro</h2>
+        <h3 style="text-align:center">Dados do Livro</h3>
             <div class="col">
                 <b>Título:</b> {{ $livro->titulo }} </br>
                 <b>Autor:</b> {{ $livro->autor }} </br>

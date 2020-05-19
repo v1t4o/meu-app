@@ -1,54 +1,50 @@
 
-        <div id="corpo" class="row">
-            <form method="POST" action="/emprestimos">
-                @csrf
-                <h2 style="text-align:center">Registro de Empréstimo</h2>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="pessoa_id">Usuário</label>
-                            <select name="pessoa_id" class="form-control" id="exampleFormControlSelect1">
-                            @foreach($pessoas as $pessoa)
-                            <option value="{{ $pessoa->id }}">{{$pessoa->nome}}</option>
-                            @endforeach
-                            </select>
-                        </div>
-                    </div>
+<div class="row">
+    <div class="col-sm">
+        <h3 style="text-align:center">Registro de Empréstimo</h3>
+        <form method="POST" action="/emprestimos">
+            @csrf
+            <div class="row">
+                <div class="col-sm form-group">
+                    <label for="pessoa_id"><b>Usuário</b></label>
+                    <select name="pessoa_id" class="form-control" id="exampleFormControlSelect1">
+                        @foreach($pessoas as $pessoa)
+                        <option value="{{ $pessoa->id }}">{{$pessoa->nome}}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="form-group">
-                            <label for="livro_id">Livro</label>
-                            <select name="livro_id" class="form-control" id="exampleFormControlSelect1">
-                            @foreach($livros as $livro)
-                            <option value="{{ $livro->id }}">{{$livro->titulo}}</option>
-                            @endforeach
-                            </select>
-                        </div>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm form-group">
+                    <label for="livro_id"><b>Livro</b></label>
+                    <select name="livro_id" class="form-control" id="exampleFormControlSelect1">
+                        @foreach($livros as $livro)
+                        <option value="{{ $livro->id }}">{{$livro->titulo}}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <div class="row">
-                    <div class="col-sm">
-                        Data de Retirada: <input name="inicio" class="datepicker" value="{{old('inicio')}}" autocomplete="off">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <b>Data de Retirada: </b></br><input name="inicio" class="datepicker" value="{{old('inicio')}}" autocomplete="off">
                 </div>
-                <div class="row">
-                    <div class="col-sm">
-                        Data de Devolução: <input name="fim" class="datepicker" value="{{old('fim')}}" autocomplete="off">
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <b>Data de Devolução:</b></br><input name="fim" class="datepicker" value="{{old('fim')}}" autocomplete="off">
                 </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <textarea name="observacao"></textarea>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <b>Observação:</b></br>
+                    <b><textarea name="observacao"></textarea>
                 </div>
-                <div class="row">
-                    
-                    <div class="col-sm">
-                        <div class="text-right">
-                            <button id="cadastro" type="submit" class="btn btn-primary">Enviar</button>
-                        </div>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-sm text-right">
+                    <button type="submit" class="btn btn-success">Enviar</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
+    </div>
+</div>

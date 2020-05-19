@@ -1,5 +1,5 @@
 
-    <h2 style="text-align:center">Cadastro de Livro</h2>
+    <h3 style="text-align:center">Cadastro de Livro</h3>
     <div class="row">
         <div class="col-sm">
             <div class="form-group">
@@ -50,7 +50,7 @@
     <div class="row">
         <div class="col-sm">
             <div class="text-right">
-                <button id="cadastro" type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-success">Enviar</button>
             </div>
         </div>
     </div>
