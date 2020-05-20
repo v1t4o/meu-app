@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('content')
-        <div class="row">
-            <div class="col">
+        <div class="card">
+            <div class="card-header">Livros Cadastrados</div>
+            <div class="card-body">
                 <div class="row">
                     <div class="col-sm">
-                        <h3 style="text-align:center">Livros Cadastrados</h3>
                         <form method="GET" action="/livros">
                             <div class="row">
                                 <div class=" col-sm input-group">

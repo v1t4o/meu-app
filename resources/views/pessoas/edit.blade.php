@@ -1,11 +1,13 @@
 @extends('layouts.master')
 @section('content')
-    <div class="row">
-        <form method="POST" action="/pessoas/{{ $pessoa->id }}">
-            @csrf
-            @method('patch')
-            <h3 style="text-align:center">Cadastro de Pessoa</h3>
-            @include('pessoas.form')
-        </form>
+    <div class="card">
+        <div class="card-header">Cadastro de Pessoa</div>
+        <div class="card-body">
+            <form method="POST" action="/pessoas/{{ $pessoa->id }}">
+                @csrf
+                @method('patch')
+                @include('pessoas.form')
+            </form>
+        </div>
     </div>
 @endsection

@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-    <div class="row">
-        <div class="col-sm">
-            <h3 style="text-align:center">Dados do Empréstimo</h3>
+    <div class="card">
+        <div class="card-header">Dados do Empréstimo</div>
+        <div class="card-body">
             <b>Título:</b> {{ $emprestimo->livro->titulo }} </br>
             <b>Usuário:</b> {{ $emprestimo->pessoa->nome }} </br>
             <b>Retirada:</b> {{ Carbon\Carbon::parse($emprestimo->inicio)->format('d/m/Y') }} </br>

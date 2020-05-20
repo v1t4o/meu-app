@@ -1,7 +1,7 @@
 
-<div class="row">
-    <div class="col-sm">
-        <h3 style="text-align:center">Registro de Empréstimo</h3>
+<div class="card">
+    <div class="card-header">Registro de Empréstimo</div>
+    <div class="card-body">
         <form method="POST" action="/emprestimos">
             @csrf
             <div class="row">
@@ -13,8 +13,6 @@
                         @endforeach
                     </select>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-sm form-group">
                     <label for="livro_id"><b>Livro</b></label>
                     <select name="livro_id" class="form-control" id="exampleFormControlSelect1">
@@ -28,8 +26,6 @@
                 <div class="col-sm">
                     <b>Data de Retirada: </b></br><input name="inicio" class="datepicker" value="{{old('inicio')}}" autocomplete="off">
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-sm">
                     <b>Data de Devolução:</b></br><input name="fim" class="datepicker" value="{{old('fim')}}" autocomplete="off">
                 </div>
