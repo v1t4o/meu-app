@@ -39,8 +39,8 @@
                                     <td>{{ $livro->isbn }}</td>
                                     <td>{{ $livro->procedencia }}</td>
                                     <td>
-                                        <a href="http://127.0.0.1:8000/livros/{{ $livro->id }}/edit"><i class="fas fa-edit"></i></a>
                                         <form method="POST" action="/livros/{{ $livro->id }}">
+                                            <a href="http://127.0.0.1:8000/livros/{{ $livro->id }}/edit"><i class="fas fa-edit"></i></a>
                                             {{ csrf_field() }} 
                                             {{ method_field('delete') }}
                                             <button type="submit"><i class="fas fa-trash"></i></button>

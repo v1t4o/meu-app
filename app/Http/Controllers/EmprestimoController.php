@@ -42,7 +42,8 @@ class EmprestimoController extends Controller
     {
         $pessoas = Pessoa::all();
         $livros = Livro::all();
-        return view ('emprestimos.create', ['pessoas' => $pessoas, 'livros' => $livros]);
+        $emprestimo = NULL;
+        return view ('emprestimos.create', ['pessoas' => $pessoas, 'livros' => $livros, 'emprestimo' => $emprestimo]);
     }
 
     /**

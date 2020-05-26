@@ -7,7 +7,7 @@
                     <div class="col-sm">
                         <form method="GET" action="/emprestimos">
                             <div class="row">
-                                <div class=" col-sm input-group">
+                                <div class="col-sm input-group">
                                     <input type="text" class="form-control" name="busca" value="{{ Request()->busca }}">
                                 </div>
                                 <div class="col-2 input-group-btn">
@@ -39,8 +39,8 @@
                                     <td>{{ Carbon\Carbon::parse($emprestimo->inicio)->format('d/m/Y') }}</td>
                                     <td>{{ Carbon\Carbon::parse($emprestimo->fim)->format('d/m/Y') }}</td>
                                     <td>
-                                        <a href="http://127.0.0.1:8000/emprestimos/{{ $emprestimo->id }}/edit"><i class="fas fa-edit"></i></a>
                                         <form method="POST" action="/emprestimos/{{ $emprestimo->id }}">
+                                            <a href="http://127.0.0.1:8000/emprestimos/{{ $emprestimo->id }}/edit"><i class="fas fa-edit"></i></a>
                                             {{ csrf_field() }} 
                                             {{ method_field('delete') }}
                                             <button type="submit"><i class="fas fa-trash"></i></button>
