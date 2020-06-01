@@ -13,6 +13,7 @@ class LivroController extends Controller
 {
     //Função para listagem de livros cadastrados
     public function index(Request $request){
+        $this->authorize('admin');
         if(isset($request->busca)){
             $livros = Livro::where('titulo', 'LIKE', "%{$request->busca}%")->paginate(10);
         }
@@ -24,11 +25,13 @@ class LivroController extends Controller
 
     //Função para redirecionamento para tela de cadastro.
     public function create(){
+        $this->authorize('admin');
         return view ('livros.create')->with('livro', new Livro);
     }
 
     //Função para salvamento de cadastro de livro no banco de dados
     public function store(Request $cadlivro){
+        $this->authorize('admin');
         $objlivro = new Livro;
         $objlivro->titulo = $cadlivro->titulo;
         $objlivro->autor = $cadlivro->autor;
@@ -39,14 +42,17 @@ class LivroController extends Controller
     }
 
     public function show(Livro $livro){
+        $this->authorize('admin');
         return view('livros.show', compact('livro'));
     }
 
     public function edit(Livro $livro){
+        $this->authorize('admin');
         return view('livros.edit', compact('livro'));
     }
 
     public function update(Livro $livro, Request $request){
+        $this->authorize('admin');
         $livro->titulo = $request->titulo;
         $livro->autor = $request->autor;
         $livro->isbn = $request->isbn;
@@ -56,6 +62,7 @@ class LivroController extends Controller
     }
 
     public function destroy(Livro $livro){
+        $this->authorize('admin');
         $livro->delete();
         return redirect("/livros");
     }

@@ -17,6 +17,7 @@ class EmprestimoController extends Controller
      */
     public function index(Request $request)
     {
+        $this->authorize('admin');
         if(isset($request->busca)){
             $resultados = Livro::where('titulo', '=', "{$request->busca}")->first();
             if($resultados != null){
@@ -40,6 +41,7 @@ class EmprestimoController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         $pessoas = Pessoa::all();
         $livros = Livro::all();
         $emprestimo = NULL;
@@ -54,6 +56,7 @@ class EmprestimoController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('admin');
         $emprestimo = new Emprestimo;
         $emprestimo->pessoa_id = $request->pessoa_id;
         $emprestimo->livro_id = $request->livro_id;
@@ -72,6 +75,7 @@ class EmprestimoController extends Controller
      */
     public function show(Emprestimo $emprestimo)
     {
+        $this->authorize('admin');
         return view('emprestimos.show')->with('emprestimo', $emprestimo);
     }
 
@@ -83,6 +87,7 @@ class EmprestimoController extends Controller
      */
     public function edit(Emprestimo $emprestimo)
     {
+        $this->authorize('admin');
         return view('emprestimos.edit', compact('emprestimo'));
 
     }
@@ -96,6 +101,7 @@ class EmprestimoController extends Controller
      */
     public function update(Request $request, Emprestimo $emprestimo)
     {
+        $this->authorize('admin');
         $emprestimo->pessoa_id = $request->pessoa_id;
         $emprestimo->livro_id = $request->livro_id;
         $emprestimo->inicio = Carbon::createFromFormat('d/m/Y', $request->inicio);
@@ -113,6 +119,7 @@ class EmprestimoController extends Controller
      */
     public function destroy(Emprestimo $emprestimo)
     {
+        $this->authorize('admin');
         $emprestimo->delete();
         return redirect("/emprestimos");
     }
