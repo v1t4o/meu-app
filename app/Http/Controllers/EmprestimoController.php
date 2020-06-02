@@ -43,7 +43,7 @@ class EmprestimoController extends Controller
     {
         $this->authorize('admin');
         $pessoas = Pessoa::all();
-        $livros = Livro::all();
+        $livros = Livro::where('status', '=', "0")->get();
         $emprestimo = NULL;
         return view ('emprestimos.create', ['pessoas' => $pessoas, 'livros' => $livros, 'emprestimo' => $emprestimo]);
     }
@@ -63,7 +63,10 @@ class EmprestimoController extends Controller
         $emprestimo->inicio = Carbon::createFromFormat('d/m/Y', $request->inicio);
         $emprestimo->fim = Carbon::createFromFormat('d/m/Y', $request->fim);
         $emprestimo->observacao = $request->observacao;
+        $emprestimo->status = "1";
+        $emprestimo->livro->status = "1";
         $emprestimo->save();
+        $emprestimo->livro->update();
         return redirect("/emprestimos");
     }
 
@@ -99,16 +102,24 @@ class EmprestimoController extends Controller
      * @param  \App\Emprestimo  $emprestimo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Emprestimo $emprestimo)
+    /*public function renew(Request $request, Emprestimo $emprestimo)
     {
         $this->authorize('admin');
-        $emprestimo->pessoa_id = $request->pessoa_id;
-        $emprestimo->livro_id = $request->livro_id;
+        
         $emprestimo->inicio = Carbon::createFromFormat('d/m/Y', $request->inicio);
         $emprestimo->fim = Carbon::createFromFormat('d/m/Y', $request->fim);
-        $emprestimo->observacao = $request->observacao;
         $emprestimo->update();
         return redirect("/emprestimos/$emprestimo->id");
+    }*/
+
+    public function destroy(Emprestimo $emprestimo)
+    {
+        $this->authorize('admin');
+        $emprestimo->status = "0";
+        $emprestimo->livro->status = "0";
+        $emprestimo->save();
+        $emprestimo->livro->update();
+        return redirect("/emprestimos");
     }
 
     /**
@@ -117,10 +128,10 @@ class EmprestimoController extends Controller
      * @param  \App\Emprestimo  $emprestimo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Emprestimo $emprestimo)
+    /*public function devolution(Emprestimo $emprestimo)
     {
         $this->authorize('admin');
         $emprestimo->delete();
         return redirect("/emprestimos");
-    }
+    }*/
 }

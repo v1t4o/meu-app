@@ -37,6 +37,7 @@ class LivroController extends Controller
         $objlivro->autor = $cadlivro->autor;
         $objlivro->isbn = $cadlivro->isbn;
         $objlivro->procedencia = $cadlivro->procedencia;
+        $objlivro->status = "0";
         $objlivro->save();
         return redirect("/livros");
     }

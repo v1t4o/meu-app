@@ -20,6 +20,7 @@ class CreateLivrosTable extends Migration
             $table->text("autor");
             $table->text("isbn");
             $table->text("procedencia");
+            $table->text("status");
         });
     }
 

@@ -23,6 +23,7 @@ class CreateEmprestimosTable extends Migration
             $table->date('inicio');
             $table->date('fim');
             $table->text('observacao')->nullable();
+            $table->text("status");
         });
     }
 
